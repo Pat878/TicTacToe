@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var userPick, compPick, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9, aI, boardCheck, checkWin;
+  var userPick, compPick, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9
   var turn = 0;
 
   $('#option1, #option2').click(function() {
@@ -128,14 +128,16 @@ $(document).ready(function() {
       $(".divTable").hide();
       userPick = "";
       compPick = "";
-    } else if (cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9 == userPick || cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9 == compPick) {
-      alert("It's a draw!");
+    } /* else if (cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9 != "&nbsp;"
+
+    ) {
+      alert("It's a draw!")
       $("button").show();
       $(".divTableCell").html("&nbsp;");
       $(".divTable").hide();
       userPick = "";
       compPick = "";
-    }
+    } */
 
   };
 
