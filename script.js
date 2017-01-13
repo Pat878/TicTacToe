@@ -95,6 +95,7 @@ $(document).ready(function() {
   };
 
   function checkWin() {
+
     if (
       (cell7 == userPick && cell8 == userPick && cell9 == userPick) ||
       (cell1 == userPick && cell2 == userPick && cell3 == userPick) ||
@@ -128,8 +129,11 @@ $(document).ready(function() {
       $(".divTable").hide();
       userPick = "";
       compPick = "";
-    } /* else if (cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9 != "&nbsp;"
+    }
 
+    /*For draw: add event listeners on each cell. Add var win to both winning scenarios. win = false when it's a draw. */
+
+   /* else if ( (cell1 == userPick) || (cell1 == compPick) && (cell2 == userPick) || (cell2 == compPick) && (cell3 == userPick) || (cell3 == compPick) && (cell4 == userPick) || (cell4 == compPick) && (cell5 == userPick) || (cell5 == compPick) && (cell6 == userPick) || (cell6 == compPick) && (cell7 == userPick) || (cell7 == compPick) && (cell8 == userPick) || (cell8 == compPick) && (cell9 == userPick) || (cell9 == compPick)
     ) {
       alert("It's a draw!")
       $("button").show();
