@@ -25,6 +25,7 @@ $(document).ready(function() {
     $(".divTable").show();
     userPick = "";
     compPick = "";
+    turn = 0;
 
   })
 
@@ -46,35 +47,35 @@ $(document).ready(function() {
         $("#cell1").html(compPick);
         turn += 1
         break;
-      case turn == 3 && $('#cell2').html() !== userPick || $('#cell2').html() == "&nbsp;":
+      case turn == 2 && $('#cell2').html() !== userPick || $('#cell2').html() == "&nbsp;":
         $("#cell2").html(compPick);
         turn += 1
         break;
-      case turn == 4 && $('#cell3').html() !== userPick || $('#cell3').html() == "&nbsp;":
+      case turn == 3 && $('#cell3').html() !== userPick || $('#cell3').html() == "&nbsp;":
         $("#cell3").html(compPick);
         turn += 1;
         break;
-      case turn == 5 && $('#cell4').html() !== userPick || $('#cell4').html() == "&nbsp;":
+      case turn == 4 && $('#cell4').html() !== userPick || $('#cell4').html() == "&nbsp;":
         $("#cell4").html(compPick)
         turn += 1;
         break;
-      case turn == 6 && $('#cell5').html() !== userPick || $('#cell5').html() == "&nbsp;":
+      case turn == 5 && $('#cell5').html() !== userPick || $('#cell5').html() == "&nbsp;":
         $("#cell5").html(compPick)
         turn += 1;
         break;
-      case turn == 7 && $('#cell6').html() !== userPick || $('#cell6').html() == "&nbsp;":
+      case turn == 6 && $('#cell6').html() !== userPick || $('#cell6').html() == "&nbsp;":
         $("#cell6").html(compPick)
         turn += 1;
         break;
-      case turn == 8 && $('#cell7').html() !== userPick || $('#cell7').html() == "&nbsp;":
+      case turn == 7 && $('#cell7').html() !== userPick || $('#cell7').html() == "&nbsp;":
         $("#cell7").html(compPick)
         turn += 1;
         break;
-      case turn == 9 && $('#cell8').html() !== userPick || $('#cell8').html() == "&nbsp;":
+      case turn == 8 && $('#cell8').html() !== userPick || $('#cell8').html() == "&nbsp;":
         $("#cell8").html(compPick)
         turn += 1;
         break;
-      case turn == 10 && $('#cell9').html() !== userPick || $('#cell9').html() == "&nbsp;":
+      case turn == 9 & $('#cell9').html() !== userPick || $('#cell9').html() == "&nbsp;":
         $("#cell9").html(compPick)
         turn += 1;
         break;
@@ -95,7 +96,7 @@ $(document).ready(function() {
   };
 
   function checkWin() {
-
+    var win;
     if (
       (cell7 == userPick && cell8 == userPick && cell9 == userPick) ||
       (cell1 == userPick && cell2 == userPick && cell3 == userPick) ||
@@ -106,12 +107,13 @@ $(document).ready(function() {
       (cell1 == userPick && cell5 == userPick && cell9 == userPick) ||
       (cell3 == userPick && cell5 == userPick && cell7 == userPick)
     ) {
-      alert("You win!");
+      alert("You win! Press Reset to play again!");
       $("button").show();
       $(".divTableCell").html("&nbsp;");
       $(".divTable").hide();
       userPick = "";
       compPick = "";
+      win = true;
 
     } else if (
       (cell7 == compPick && cell8 == compPick && cell9 == compPick) ||
@@ -123,25 +125,17 @@ $(document).ready(function() {
       (cell1 == compPick && cell5 == compPick && cell9 == compPick) ||
       (cell3 == compPick && cell5 == compPick && cell7 == compPick)
     ) {
-      alert("You lose!");
+      alert("You lose! Press Reset to play again!");
       $("button").show();
       $(".divTableCell").html("&nbsp;");
       $(".divTable").hide();
       userPick = "";
       compPick = "";
+      win = true;
+
+    } else if (win !== true && turn == 9) {
+      alert("It's a draw! Press Reset to play again!")
     }
-
-    /*For draw: add event listeners on each cell. Add var win to both winning scenarios. win = false when it's a draw. */
-
-   /* else if ( (cell1 == userPick) || (cell1 == compPick) && (cell2 == userPick) || (cell2 == compPick) && (cell3 == userPick) || (cell3 == compPick) && (cell4 == userPick) || (cell4 == compPick) && (cell5 == userPick) || (cell5 == compPick) && (cell6 == userPick) || (cell6 == compPick) && (cell7 == userPick) || (cell7 == compPick) && (cell8 == userPick) || (cell8 == compPick) && (cell9 == userPick) || (cell9 == compPick)
-    ) {
-      alert("It's a draw!")
-      $("button").show();
-      $(".divTableCell").html("&nbsp;");
-      $(".divTable").hide();
-      userPick = "";
-      compPick = "";
-    } */
 
   };
 
