@@ -45,40 +45,40 @@ $(document).ready(function() {
 
   function aI() {
     switch (true) {
-      case turn == 1 && $('#cell1').html() !== userPick || $('#cell1').html() == "&nbsp;":
-        $("#cell1").html(compPick);
+      case turn == 1 && $('#1').html() !== userPick || $('#1').html() == "&nbsp;":
+        $("#1").html(compPick);
         turn += 1
         break;
-      case turn == 2 && $('#cell2').html() !== userPick || $('#cell2').html() == "&nbsp;":
-        $("#cell2").html(compPick);
+      case turn == 2 && $('#2').html() !== userPick || $('#2').html() == "&nbsp;":
+        $("#2").html(compPick);
         turn += 1
         break;
-      case turn == 3 && $('#cell3').html() !== userPick || $('#cell3').html() == "&nbsp;":
-        $("#cell3").html(compPick);
+      case turn == 3 && $('#3').html() !== userPick || $('#3').html() == "&nbsp;":
+        $("#3").html(compPick);
         turn += 1;
         break;
-      case turn == 4 && $('#cell4').html() !== userPick || $('#cell4').html() == "&nbsp;":
-        $("#cell4").html(compPick)
+      case turn == 4 && $('#4').html() !== userPick || $('#4').html() == "&nbsp;":
+        $("#4").html(compPick)
         turn += 1;
         break;
-      case turn == 5 && $('#cell5').html() !== userPick || $('#cell5').html() == "&nbsp;":
-        $("#cell5").html(compPick)
+      case turn == 5 && $('#5').html() !== userPick || $('#5').html() == "&nbsp;":
+        $("#5").html(compPick)
         turn += 1;
         break;
-      case turn == 6 && $('#cell6').html() !== userPick || $('#cell6').html() == "&nbsp;":
-        $("#cell6").html(compPick)
+      case turn == 6 && $('#6').html() !== userPick || $('#6').html() == "&nbsp;":
+        $("#6").html(compPick)
         turn += 1;
         break;
-      case turn == 7 && $('#cell7').html() !== userPick || $('#cell7').html() == "&nbsp;":
-        $("#cell7").html(compPick)
+      case turn == 7 && $('#7').html() !== userPick || $('#7').html() == "&nbsp;":
+        $("#7").html(compPick)
         turn += 1;
         break;
-      case turn == 8 && $('#cell8').html() !== userPick || $('#cell8').html() == "&nbsp;":
-        $("#cell8").html(compPick)
+      case turn == 8 && $('#8').html() !== userPick || $('#8').html() == "&nbsp;":
+        $("#8").html(compPick)
         turn += 1;
         break;
-      case turn == 9 & $('#cell9').html() !== userPick || $('#cell9').html() == "&nbsp;":
-        $("#cell9").html(compPick)
+      case turn == 9 & $('#9').html() !== userPick || $('#9').html() == "&nbsp;":
+        $("#9").html(compPick)
         turn += 1;
         break;
     };
@@ -86,15 +86,15 @@ $(document).ready(function() {
   };
 
   boardCheck = function() {
-    cell1 = $('#cell1').html();
-    cell2 = $('#cell2').html();
-    cell3 = $('#cell3').html();
-    cell4 = $('#cell4').html();
-    cell5 = $('#cell5').html();
-    cell6 = $('#cell6').html();
-    cell7 = $('#cell7').html();
-    cell8 = $('#cell8').html();
-    cell9 = $('#cell9').html();
+    cell1 = $('#1').html();
+    cell2 = $('#2').html();
+    cell3 = $('#3').html();
+    cell4 = $('#4').html();
+    cell5 = $('#5').html();
+    cell6 = $('#6').html();
+    cell7 = $('#7').html();
+    cell8 = $('#8').html();
+    cell9 = $('#9').html();
   };
 
   function checkWin() {
