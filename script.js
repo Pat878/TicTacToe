@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  var userPick, compPick, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9, selectedCells;
+  var userPick, compPick, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9;
+  var selectedCells = []
   var turn = 0;
 
   $('#option1, #option2').click(function() {
@@ -32,6 +33,7 @@ $(document).ready(function() {
   $(".divTableCell").click(function() {
 
     $(this).html(userPick);
+    selectedCells.push(this.id)
     boardCheck();
     checkWin();
     turn += 1;
