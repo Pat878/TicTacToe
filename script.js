@@ -44,44 +44,14 @@ $(document).ready(function() {
   })
 
   function aI() {
-    switch (true) {
-      case turn == 1 && $('#1').html() !== userPick || $('#1').html() == "&nbsp;":
-        $("#1").html(compPick);
-        turn += 1
-        break;
-      case turn == 2 && $('#2').html() !== userPick || $('#2').html() == "&nbsp;":
-        $("#2").html(compPick);
-        turn += 1
-        break;
-      case turn == 3 && $('#3').html() !== userPick || $('#3').html() == "&nbsp;":
-        $("#3").html(compPick);
-        turn += 1;
-        break;
-      case turn == 4 && $('#4').html() !== userPick || $('#4').html() == "&nbsp;":
-        $("#4").html(compPick)
-        turn += 1;
-        break;
-      case turn == 5 && $('#5').html() !== userPick || $('#5').html() == "&nbsp;":
-        $("#5").html(compPick)
-        turn += 1;
-        break;
-      case turn == 6 && $('#6').html() !== userPick || $('#6').html() == "&nbsp;":
-        $("#6").html(compPick)
-        turn += 1;
-        break;
-      case turn == 7 && $('#7').html() !== userPick || $('#7').html() == "&nbsp;":
-        $("#7").html(compPick)
-        turn += 1;
-        break;
-      case turn == 8 && $('#8').html() !== userPick || $('#8').html() == "&nbsp;":
-        $("#8").html(compPick)
-        turn += 1;
-        break;
-      case turn == 9 & $('#9').html() !== userPick || $('#9').html() == "&nbsp;":
-        $("#9").html(compPick)
-        turn += 1;
-        break;
-    };
+    var randomNumber = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
+    console.log(randomNumber)
+    if (selectedCells.includes(randomNumber) == false) {
+      if ($("#"+randomNumber).html() !== userPick && $("#"+randomNumber).html() !== compPick) {
+        $("#"+randomNumber).html(compPick);
+        turn += 1}
+    else { aI() }
+ }
 
   };
 
