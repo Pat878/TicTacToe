@@ -37,20 +37,20 @@ $(document).ready(function() {
     boardCheck();
     checkWin();
     turn += 1;
-    aI();
+    computerMove();
     boardCheck();
     checkWin();
 
   })
 
-  function aI() {
+  function computerMove() {
     var randomNumber = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
     console.log(randomNumber)
     if (selectedCells.includes(randomNumber) == false) {
       if ($("#"+randomNumber).html() !== userPick && $("#"+randomNumber).html() !== compPick) {
         $("#"+randomNumber).html(compPick);
         turn += 1}
-    else { aI() }
+    else { computerMove() }
  }
 
   };
