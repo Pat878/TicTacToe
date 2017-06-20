@@ -45,7 +45,6 @@ $(document).ready(function() {
 
   function computerMove() {
     var randomNumber = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
-    console.log(randomNumber)
     if (selectedCells.includes(randomNumber) == false) {
       if ($("#"+randomNumber).html() !== userPick && $("#"+randomNumber).html() !== compPick) {
         $("#"+randomNumber).html(compPick);
