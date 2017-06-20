@@ -32,6 +32,10 @@ $(document).ready(function() {
 
   $(".divTableCell").click(function() {
 
+    if (userPick == undefined || userPick == "") {
+      alert("Hey! Select X or O first!")
+      location.reload();}
+
     $(this).html(userPick);
     selectedCells.push(this.id)
     boardCheck();
@@ -46,7 +50,7 @@ $(document).ready(function() {
   function computerMove() {
     var randomNumber = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
     if (selectedCells.includes(randomNumber) == false) {
-      if ($("#"+randomNumber).html() !== userPick && $("#"+randomNumber).html() !== compPick) {
+        if ($("#"+randomNumber).html() !== userPick && $("#"+randomNumber).html() !== compPick) {
         $("#"+randomNumber).html(compPick);
         turn += 1}
     else { computerMove() }
